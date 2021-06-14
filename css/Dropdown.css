@@ -3,10 +3,11 @@
 	padding:0;
 	box-sizing:border-box;
 }
+
 body{
 	font-family:verdana;
-	width:80%;
-	margin:0 auto;
+    width:95%;
+	margin:auto;																																					
 	background-color:#f2f2f2;
 	height:9000px;
 }
@@ -15,7 +16,8 @@ body{
 	float:right;
 	display:none;
 }
- .drop-menu .hamburger>div{
+
+ .drop-menu .hamburger > div{
  	position:relative;
  	cursor:pointer;
  	float:right;
@@ -27,14 +29,13 @@ body{
  	justify-content:center;
  	align-items:center;
  }
+
 .drop-menu  .line{
 	position:relative;
 	width:28px;
 	height:4px;
 	background-color:white;
-	/*float:right;*/
-	
-	
+	/*float:right;*/	
 }
 
 .drop-menu .line:before{
@@ -47,6 +48,7 @@ body{
 	top:7px;
 	transition:all .3s;
 }
+
 .drop-menu  .line:after{
 	content:"";
 	background-color:white;
@@ -58,20 +60,23 @@ body{
 	top:-7px;
 	transition:all .3s;
 }
+
 header .drop-menu{
 	top:5px;
 	position:fixed;
-	width:80%;
+	width:95%;
 	background-color:#bbb;
 	z-index:5;
 	box-shadow:1px 1px 1px rgba(0,0,0,0.5);
 }
+
 header .drop-menu h1{
 	color:  #004080;
 	float:left;
-	margin-left:20px;
+	margin:0px 20px 0px 20px;
 }
-header .drop-menu ul{
+
+header .drop-menu .menu{
 	clear:both;
    	display:flex;
     list-style:none;
@@ -83,18 +88,21 @@ header .drop-menu ul{
     max-height:0;
     transition:all.4s;
 }
+
 header .drop-menu li{
 	text-align:center;
     width:100%;
     padding:15px;
 	
 }
+
 header .drop-menu ul a{
 	text-decoration:none;
 	font-size:16px;
 	color:white;
 	display:block;
 }
+
 header .drop-menu li:hover{
 	background-color:#333;
 }
@@ -106,7 +114,25 @@ header .drop-menu li:hover{
  .drop-menu #check:checked ~ .hamburger > div >div {
 	background-color:#bbb;
 }
-.drop-menu #check:checked ~ .hamburger > div >div:before,.drop-menu #check:checked ~ .hamburger > div >div:after {
+.drop-menu #check:checked ~ .hamburger > div > div:before,.drop-menu #check:checked ~ .hamburger > div >div:after {
 	top:0;
 }
- 
+
+@media (min-width:750px) {
+
+	.drop-menu .hamburger > div {
+		display: none;
+	}
+
+	header .drop-menu .menu{
+		clear:none;
+	    display:flex;
+		list-style:none;
+		flex-direction:row;
+		justify-content:space-around;
+		align-items:center;
+		max-height:250px;
+       	transform:scale(1);
+		
+	}
+}
