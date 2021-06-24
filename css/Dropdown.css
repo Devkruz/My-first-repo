@@ -67,6 +67,7 @@ header .drop-menu{
 	width:95%;
 	background-color:#bbb;
 	z-index:5;
+	padding:0.2rem;
 	box-shadow:1px 1px 1px rgba(0,0,0,0.5);
 }
 
@@ -92,7 +93,7 @@ header .drop-menu .menu{
 header .drop-menu li{
 	text-align:center;
     width:100%;
-    padding:15px;
+
 	
 }
 
@@ -101,6 +102,8 @@ header .drop-menu ul a{
 	font-size:16px;
 	color:white;
 	display:block;
+	height: 49px;
+	line-height: 3;
 }
 
 header .drop-menu li:hover{
